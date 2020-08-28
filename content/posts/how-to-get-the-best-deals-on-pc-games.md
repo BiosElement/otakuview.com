@@ -1,5 +1,6 @@
 +++
 title = "How to Get the Best Deals on PC Games"
+path = "how-to-get-the-best-deals-on-pc-games"
 date = 2020-03-22
 +++
 

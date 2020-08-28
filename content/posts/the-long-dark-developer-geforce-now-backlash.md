@@ -1,5 +1,6 @@
 +++
 title = "The Long Dark Developer Opts-Out of GeForce Now, Faces Backlash"
+path = "the-long-dark-developer-geforce-now-backlash"
 date = 2020-03-05
 +++
 

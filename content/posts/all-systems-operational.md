@@ -1,5 +1,6 @@
 +++
 title = "All Systems Operational"
+path = "all-systems-operational"
 date = 2020-08-15
 +++
 Welcome to the new official home of the Otaku View Community! Currently somewhat a work in progress (isn't it obvious), this will be the hub of all our activities. This is to be a replacement of the previous Discourse forums which, while an amazing piece of software, simply went unused by our small community.
