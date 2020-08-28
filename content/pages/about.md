@@ -8,6 +8,8 @@ Otaku View is a community-run website focused on games and technology. We respec
 
 ## Mumble
 
-- Server: otakuview.com
+In the event of a Discord outage, we keep a Mumble server online to keep the communication lines up.
+
+- Server: voice.otakuview.com
 - Port: 64738
 - Password: bios
