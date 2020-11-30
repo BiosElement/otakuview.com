@@ -5,6 +5,16 @@
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
   {{ page.content | safe }}
+
+  <hr />
+  
+  <script src="https://utteranc.es/client.js"
+        repo="BiosElement/otakuview.com"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+  </script>
 </div>
 {% endblock content %}
 
