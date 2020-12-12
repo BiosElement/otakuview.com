@@ -20,7 +20,7 @@
         <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
       {% endif %}
 
-      <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6c93d959178f407a8a303b3942cc15df"}'></script><!-- End Cloudflare Web Analytics -->
+      <script async defer data-domain="otakuview.com" src="https://plausible.otakuview.com/js/index.js"></script>
       
       {% block extra_head %}
       {% endblock extra_head %}
