@@ -16,4 +16,4 @@ In the event of a Discord outage, we keep a Mumble server online to keep the com
 
 ## Privacy
 
-Our intent is to respect our users privacy and only collect minimal analytics to see what content is successful and where we should focus our efforts. To this end, we use [Cloudflare](https://www.cloudflare.com/web-analytics/) analytics which set no cookies and does not collect personal information.
+Our intent is to respect our users privacy and only collect minimal analytics to see what content is successful and where we should focus our efforts. To this end, we use [Plausible](https://plausible.io/) analytics which set no cookies and does not collect personal information. In fact, you can see [our analytics](https://plausible.io/otakuview.com) yourself as there is nothing to hide.
