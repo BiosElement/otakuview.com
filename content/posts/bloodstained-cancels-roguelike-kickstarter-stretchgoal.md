@@ -2,6 +2,8 @@
 title = "Bloodstained cancels Roguelike Kickstarter stretch goal"
 path = "bloodstained-cancels-roguelike-kickstarter-stretchgoal"
 date = 2020-03-04
+[extra]
+comments = true
 +++
 
 ![Bloodstained Gameplay](/bloodstained-gameplay.jpg "Bloodstained Gameplay")

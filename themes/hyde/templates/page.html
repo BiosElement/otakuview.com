@@ -3,9 +3,12 @@
 {% block content %}
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.date %}
   <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+  {% endif %}
   {{ page.content | safe }}
 
+  {% if page.extra.comments and page.extra.comments == true %}
   <hr />
   
   <script src="https://utteranc.es/client.js"
@@ -15,6 +18,7 @@
         crossorigin="anonymous"
         async>
   </script>
+  {% endif %}
 </div>
 {% endblock content %}
 
