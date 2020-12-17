@@ -1,0 +1,20 @@
+{
+  "name": "ikuze",
+  "version": "1.0.0",
+  "description": "Theme for OtakuView.com",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.3.1",
+    "autoprefixer": "^10.1.0",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.2.1",
+    "tailwindcss": "^2.0.2",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "cross-env NODE_ENV=production npx tailwindcss-cli@latest build ./css/main.css -o ./static/style.css",
+    "watch": "watch \"cross-env npx tailwindcss-cli@latest build ./css/main.css -o ./static/style.css\" ./css"
+  },
+  "author": "William Chambers",
+  "license": "UNLICENSED"
+}

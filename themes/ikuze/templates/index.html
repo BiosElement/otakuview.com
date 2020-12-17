@@ -11,11 +11,7 @@
       <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
       <!-- CSS -->
-      <link rel="stylesheet" href="{{ get_url(path="css/sanitize.css") }}">
-      <link rel="stylesheet" href="{{ get_url(path="css/forms.css") }}">
-      <link rel="stylesheet" href="{{ get_url(path="css/assets.css") }}">
-      <link rel="stylesheet" href="{{ get_url(path="css/typography.css") }}">
-      <link rel="stylesheet" href="{{ get_url(path="css/main.css") }}">
+      <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
 
       {% if config.generate_feed %}
         <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
