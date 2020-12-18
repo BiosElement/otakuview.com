@@ -24,23 +24,12 @@
             <h1>Otaku View</h1>
         </div>
     </header>
-    <!--Container-->
-    <div id="content-wrapper" class="container w-full md:max-w-6xl mx-auto pt-20">
-        <div class="flex flex-wrap -mb-4">
-            <div class="content-item w-full md:w-1/2 mb-4 bg-gray-400 h-12"></div>
-            <div class="content-item w-full md:w-1/2 mb-4 bg-gray-500 h-12"></div>
-            <div class="content-item w-full md:w-1/2 mb-4 bg-gray-400 h-12"></div>
-            <div class="content-item w-full md:w-1/2 mb-4 bg-gray-500 h-12"></div>
-            <div class="content-item w-full md:w-1/2 mb-4 bg-gray-400 h-12"></div>
-            <div class="content-item w-full md:w-1/2 mb-4 bg-gray-400 h-12"></div>
-          </div>
-    </div>
-
     {% block content %}
+    <!--Container-->    
     <div id="content-wrapper" class="container w-full md:max-w-6xl mx-auto pt-20">
         <div class="flex flex-wrap items-stretch -mb-4">
             {% for page in section.pages %}
-            <div class="content-item w-full md:w-1/2 bg-gray-400 p-8 h-auto text-white" {% if page.extra.featured_image %}style = "background-image: url({{ config.base_url }}{{ page.extra.featured_image }}); background-size: cover;"{% endif %}>
+            <div class="content-item w-full md:w-1/2 bg-gray-400 p-8 text-white" {% if page.extra.featured_image %}style = "background-image: url({{ config.base_url }}{{ page.extra.featured_image }}); background-size: cover;"{% endif %}>
                 <div class="post flex flex-col items-center">
                     <h1 class="post-title text-4xl text-center justify-center bg-black">
                         <a href="{{ page.permalink }}">
@@ -50,7 +39,11 @@
                     {% if page.summary %}
                     {{ page.summary | safe | striptags }}
                     {% endif %}
-                    <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+                </div>
+                <div class="object-none object-right-bottom text-right">
+                    <span class="post-date bg-black p-2">
+                        {{ page.date | date(format="%Y-%m-%d") }}
+                    </span>
                 </div>
             </div>
             {% endfor %}
@@ -58,5 +51,8 @@
     </div>
     {% endblock content %}
 
+    <footer class="container w-full md:max-w-6xl mx-auto pt-10 pb-10 text-gray-700 body-font text-center">
+        © 2020 William Chambers
+    </footer>
 </body>
 </html>
