@@ -4,7 +4,14 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'ov-green': '#73854A',
+      },
+      fontFamily: {
+        'ovLogo': ['Merienda'],
+      }
+    }
   },
   variants: {
     extend: {},

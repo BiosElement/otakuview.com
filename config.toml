@@ -16,7 +16,7 @@ highlight_code = true
 build_search_index = true
 generate_feed = true
 
-theme = "hyde"
+theme = "ikuze"
 
 [extra]
 # Put all your custom variables here

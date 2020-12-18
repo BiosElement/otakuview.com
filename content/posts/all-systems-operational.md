@@ -6,6 +6,7 @@ date = 2020-08-15
 comments = true
 +++
 Welcome to the new official home of the Otaku View Community! Currently somewhat a work in progress (isn't it obvious), this will be the hub of all our activities. This is to be a replacement of the previous Discourse forums which, while an amazing piece of software, simply went unused by our small community.
+<!-- more -->
 
 Our community is much more into voice chat, but at least this will tie everyone together to one place.
 

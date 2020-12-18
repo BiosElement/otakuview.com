@@ -2,3 +2,11 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.content-item:nth-child(3n) {
+    @apply w-full bg-gray-500;
+}
+
+.post {
+    min-height: 300px;
+}

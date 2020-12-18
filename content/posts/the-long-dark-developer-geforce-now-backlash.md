@@ -4,6 +4,7 @@ path = "the-long-dark-developer-geforce-now-backlash"
 date = 2020-03-05
 [extra]
 comments = true
+featured_image = "/the-long-dark.png"
 +++
 
 ![The Long Dark](/the-long-dark.png "The Long Dark Logo")

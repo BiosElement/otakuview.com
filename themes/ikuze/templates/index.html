@@ -1,48 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <!-- Enable responsiveness on mobile devices-->
-      <!-- viewport-fit=cover is to support iPhone X rounded corners and notch in landscape-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
 
-      <title>{% block title %}{{ config.title }}{% endblock title %}</title>
-
-      <!-- CSS -->
-      <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
-
-      {% if config.generate_feed %}
-        <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
-      {% endif %}
-
-      <script async defer data-domain="otakuview.com" src="https://plausible.otakuview.com/js/index.js"></script>
-      
-      {% block extra_head %}
-      {% endblock extra_head %}
-    </head>
-
-    <body>
-
-        <div class="content container">
-            {% block content %}
-                <div class="posts">
-                    {% for page in section.pages | reverse %}
-                      <div class="post">
-                        <h1 class="post-title">
-                          <a href="{{ page.permalink }}">
-                            {{ page.title }}
-                          </a>
-                        </h1>
-
-                        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-                      </div>
-                    {% endfor %}
-                </div>
-            {% endblock content %}
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    
+    {% if config.generate_feed %}
+    <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
+    {% endif %}
+    
+    <script async defer data-domain="otakuview.com" src="https://plausible.otakuview.com/js/index.js"></script>
+    
+    {% block extra_head %}
+    {% endblock extra_head %}
+</head>
+<body>
+    <header>
+        <div id="header-wrapper" class="container w-full md:max-w-6xl mx-auto pt-20 bg-gray-200 md:rounded-b-lg">
+            <h1>Otaku View</h1>
         </div>
+    </header>
+    <!--Container-->
+    <div id="content-wrapper" class="container w-full md:max-w-6xl mx-auto pt-20">
+        <div class="flex flex-wrap -mb-4">
+            <div class="content-item w-full md:w-1/2 mb-4 bg-gray-400 h-12"></div>
+            <div class="content-item w-full md:w-1/2 mb-4 bg-gray-500 h-12"></div>
+            <div class="content-item w-full md:w-1/2 mb-4 bg-gray-400 h-12"></div>
+            <div class="content-item w-full md:w-1/2 mb-4 bg-gray-500 h-12"></div>
+            <div class="content-item w-full md:w-1/2 mb-4 bg-gray-400 h-12"></div>
+            <div class="content-item w-full md:w-1/2 mb-4 bg-gray-400 h-12"></div>
+          </div>
+    </div>
 
-    </body>
+    {% block content %}
+    <div id="content-wrapper" class="container w-full md:max-w-6xl mx-auto pt-20">
+        <div class="flex flex-wrap items-stretch -mb-4">
+            {% for page in section.pages %}
+            <div class="content-item w-full md:w-1/2 bg-gray-400 p-8 h-auto text-white" {% if page.extra.featured_image %}style = "background-image: url({{ config.base_url }}{{ page.extra.featured_image }}); background-size: cover;"{% endif %}>
+                <div class="post flex flex-col items-center">
+                    <h1 class="post-title text-4xl text-center justify-center bg-black">
+                        <a href="{{ page.permalink }}">
+                            {{ page.title }}
+                        </a>
+                    </h1>
+                    {% if page.summary %}
+                    {{ page.summary | safe | striptags }}
+                    {% endif %}
+                    <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock content %}
 
+</body>
 </html>
