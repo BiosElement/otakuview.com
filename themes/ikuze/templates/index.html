@@ -30,21 +30,25 @@
         <div class="flex flex-wrap items-stretch -mb-4">
             {% for page in section.pages %}
             <div class="content-item w-full md:w-1/2 bg-gray-400 p-8 text-white" {% if page.extra.featured_image %}style = "background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url({{ config.base_url }}{{ page.extra.featured_image }}); background-size: cover;"{% endif %}>
-                <div class="post flex flex-col items-center">
+                <div class="post flex flex-col h-full">
                     <h1 class="post-title text-4xl text-center justify-center bg-black">
                         <a href="{{ page.permalink }}">
                             {{ page.title }}
                         </a>
                     </h1>
-                    {% if page.summary %}
-                    <span class="font-bold text-shadow">{{ page.summary | safe | striptags }}</span>
-                    {% endif %}
-                </div>
-                <div class="object-none object-right-bottom text-right">
-                    <span class="post-date bg-black p-2">
-                        {{ page.date | date(format="%Y-%m-%d") }}
-                    </span>
-                </div>
+                    <div class="flex-grow">
+                        {% if page.summary %}
+                        <div class="h-full flex justify-center items-center">
+                            <span class="font-bold text-shadow">{{ page.summary | safe | striptags }}</span>
+                        </div>
+                        {% endif %}
+                    </div>
+                    <div class="object-none object-right-bottom text-right">
+                        <span class="post-date bg-black p-2">
+                            {{ page.date | date(format="%Y-%m-%d") }}
+                        </span>
+                    </div>
+                  </div>
             </div>
             {% endfor %}
         </div>
