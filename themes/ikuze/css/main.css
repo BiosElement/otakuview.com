@@ -7,8 +7,20 @@
     @apply w-full bg-gray-500;
 }
 
-.post {
-    min-height: 300px;
+.content-item:first-child {
+    @apply rounded-tl-lg;
+}
+
+.content-item:nth-child(2) {
+    @apply rounded-tr-lg;
+}
+
+.content-item:last-child {
+    @apply rounded-br-lg;
+}
+
+.content-item:nth-last-child(2) {
+    @apply rounded-bl-lg;
 }
 
 .post-title span {
