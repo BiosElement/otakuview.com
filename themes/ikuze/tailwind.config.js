@@ -7,6 +7,10 @@ module.exports = {
     extend: {
       colors: {
         'ov-green': '#73854A',
+        'haijiro': '#ECE9E0',
+        'gofun': '#FCFBF6',
+        'nezumi': '#69696C',
+        'nibi': '#3B393C',
       },
       fontFamily: {
         'ovLogo': ['Merienda'],
