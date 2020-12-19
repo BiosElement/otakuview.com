@@ -1,24 +1,26 @@
 {% extends "index.html" %}
 
 {% block content %}
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  {% if page.date %}
-  <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-  {% endif %}
-  {{ page.content | safe }}
-
-  {% if page.extra.comments and page.extra.comments == true %}
-  <hr />
-  
-  <script src="https://utteranc.es/client.js"
+<div id="content-wrapper" class="container w-full md:max-w-6xl mx-auto p-10">
+    <article class="post prose max-w-none">
+        <h1 class="post-title">{{ page.title }}</h1>
+        {% if page.date %}
+        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+        {% endif %}
+        {{ page.content | safe }}
+        
+        {% if page.extra.comments and page.extra.comments == true %}
+        <hr />
+        
+        <script src="https://utteranc.es/client.js"
         repo="BiosElement/otakuview.com"
         issue-term="pathname"
         theme="github-light"
         crossorigin="anonymous"
         async>
-  </script>
-  {% endif %}
+    </script>
+    {% endif %}
+    </article>
 </div>
 {% endblock content %}
 
