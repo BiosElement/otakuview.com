@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    
     <!-- CSS -->
     <link rel="stylesheet" href="{{ get_url(path="style.css") }}">
-
+    
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     
     {% if config.generate_feed %}
@@ -18,44 +18,69 @@
     {% block extra_head %}
     {% endblock extra_head %}
 </head>
-<body class="bg-gofun">
+<body class="bg-nezumi text-gofun">
     <header>
-        <div id="header-wrapper" class="container w-full md:max-w-6xl mx-auto bg-gray-200">
+        <div id="header-wrapper" class="container w-full md:max-w-6xl mx-auto bg-nibi rounded-b-lg">
             <a href="{{ config.base_url }}"><h1 class="font-ovLogo text-6xl text-center p-4">Otaku View</h1></a>
         </div>
     </header>
     {% block content %}
     <!--Container-->    
     <div id="content-wrapper" class="container w-full md:max-w-6xl mx-auto pt-10">
-        <div class="flex flex-wrap items-stretch -mb-4">
+        <div class="flex flex-wrap items-stretch">
             {% for page in section.pages %}
-            <div class="content-item w-full md:w-1/2 bg-gray-400 p-8 text-white" {% if page.extra.featured_image %}style = "background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url({{ config.base_url }}{{ page.extra.featured_image }}); background-size: cover;"{% endif %}>
-                <div class="post flex flex-col h-full">
-                    <h1 class="post-title text-4xl text-center justify-center p-2"><span>
-                        <a href="{{ page.permalink }}">
-                            {{ page.title }}
-                        </a></span>
-                    </h1>
-                    <div class="flex-grow">
-                        {% if page.summary %}
-                        <div class="h-full flex justify-center items-center">
-                            <span class="font-bold text-shadow text-justify text-lg max-w-md">{{ page.summary | safe | striptags }}</span>
+            <div class="content-item w-full md:w-1/2 p-8" {% if page.extra.featured_image %}style = "background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url({{ config.base_url }}{{ page.extra.featured_image }}); background-size: cover;"{% endif %}>
+                <div class="max-w-xl mx-auto bg-haijiro overflow-hidden shadow-md rounded-lg">
+                    <div class="p-6">
+                        <div>
+                            <span class="text-blue-600 text-xs font-medium uppercase">Tag</span>
+                            <a href="{{ page.permalink }}" class="block text-nibi font-bold text-2xl mt-2 hover:text-gray-600 hover:underline">{{ page.title }}</a>
+                            {% if page.summary %}
+                            <p class="text-sm font-semibold text-shadow text-justify text-nezumi mt-2">{{ page.summary | safe | striptags }}</p>
+                            {% endif %}
                         </div>
-                        {% endif %}
+                        
+                        <div class="mt-4">
+                            <div class="flex items-center">
+                                {% if page.extra.author %}
+                                <div class="flex s">
+                                    <p class="mx-2 text-gray-700 font-semibold">{{ page.extra.author }}</p>
+                                </div>
+                                {% endif %}
+                                <span class="mx-1 text-gray-600 text-xs">{{ page.date | date(format="%e %B %Y") }}</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="object-none object-right-bottom text-right">
-                        <span class="post-date bg-nibi p-2">
-                            {{ page.date | date(format="%Y-%m-%d") }}
-                        </span>
-                    </div>
-                  </div>
+                </div>
             </div>
             {% endfor %}
         </div>
+        
+        <div class="flex pt-8 justify-center items-center">
+            <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-500 rounded-md cursor-not-allowed">
+                previous
+            </a>
+            
+            <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-700 hover:bg-indigo-600 hover:text-white rounded-md">
+                1
+            </a>
+            
+            <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-700 hover:bg-indigo-600 hover:text-white rounded-md">
+                2
+            </a>
+            
+            <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-700 hover:bg-indigo-600 hover:text-white rounded-md">
+                3
+            </a>
+            
+            <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-700 hover:bg-indigo-600 hover:text-white rounded-md">
+                Next
+            </a>
+        </div>
     </div>
     {% endblock content %}
-
-    <footer class="container w-full md:max-w-6xl mx-auto pt-10 pb-10 text-gray-700 body-font text-center">
+    
+    <footer class="container w-full md:max-w-6xl mx-auto pt-10 pb-10 body-font text-center">
         © 2020 William Chambers
     </footer>
 </body>
