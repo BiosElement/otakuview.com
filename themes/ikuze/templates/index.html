@@ -20,16 +20,16 @@
 </head>
 <body>
     <header>
-        <div id="header-wrapper" class="container w-full md:max-w-6xl mx-auto pt-20 bg-gray-200 md:rounded-b-lg">
-            <h1>Otaku View</h1>
+        <div id="header-wrapper" class="container w-full md:max-w-6xl mx-auto bg-gray-200">
+            <h1 class="font-ovLogo text-6xl text-center p-4">Otaku View</h1>
         </div>
     </header>
     {% block content %}
     <!--Container-->    
-    <div id="content-wrapper" class="container w-full md:max-w-6xl mx-auto pt-20">
+    <div id="content-wrapper" class="container w-full md:max-w-6xl mx-auto pt-10">
         <div class="flex flex-wrap items-stretch -mb-4">
             {% for page in section.pages %}
-            <div class="content-item w-full md:w-1/2 bg-gray-400 p-8 text-white" {% if page.extra.featured_image %}style = "background-image: url({{ config.base_url }}{{ page.extra.featured_image }}); background-size: cover;"{% endif %}>
+            <div class="content-item w-full md:w-1/2 bg-gray-400 p-8 text-white" {% if page.extra.featured_image %}style = "background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url({{ config.base_url }}{{ page.extra.featured_image }}); background-size: cover;"{% endif %}>
                 <div class="post flex flex-col items-center">
                     <h1 class="post-title text-4xl text-center justify-center bg-black">
                         <a href="{{ page.permalink }}">
@@ -37,7 +37,7 @@
                         </a>
                     </h1>
                     {% if page.summary %}
-                    {{ page.summary | safe | striptags }}
+                    <span class="font-bold text-shadow">{{ page.summary | safe | striptags }}</span>
                     {% endif %}
                 </div>
                 <div class="object-none object-right-bottom text-right">
