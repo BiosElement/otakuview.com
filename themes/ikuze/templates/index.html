@@ -31,10 +31,10 @@
             {% for page in section.pages %}
             <div class="content-item w-full md:w-1/2 bg-gray-400 p-8 text-white" {% if page.extra.featured_image %}style = "background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url({{ config.base_url }}{{ page.extra.featured_image }}); background-size: cover;"{% endif %}>
                 <div class="post flex flex-col h-full">
-                    <h1 class="post-title text-4xl text-center justify-center bg-nibi p-2">
+                    <h1 class="post-title text-4xl text-center justify-center p-2"><span>
                         <a href="{{ page.permalink }}">
                             {{ page.title }}
-                        </a>
+                        </a></span>
                     </h1>
                     <div class="flex-grow">
                         {% if page.summary %}

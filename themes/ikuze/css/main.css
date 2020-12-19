@@ -10,3 +10,9 @@
 .post {
     min-height: 300px;
 }
+
+.post-title span {
+    box-shadow: 5px 0 0px 0px #3B393C, -5px 0 0px 0px #3B393C;
+    background-color: #3B393C; line-height: 1.5;
+    padding: 5px 0;
+}
