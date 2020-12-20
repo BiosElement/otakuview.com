@@ -7,22 +7,6 @@
     @apply w-full bg-gray-500;
 }
 
-.content-item:first-child {
-    @apply rounded-tl-lg;
-}
-
-.content-item:nth-child(2) {
-    @apply rounded-tr-lg;
-}
-
-.content-item:last-child {
-    @apply rounded-br-lg;
-}
-
-.content-item:nth-last-child(2) {
-    @apply rounded-bl-lg;
-}
-
 .post-title span {
     box-shadow: 5px 0 0px 0px #3B393C, -5px 0 0px 0px #3B393C;
     background-color: #3B393C; line-height: 1.5;
