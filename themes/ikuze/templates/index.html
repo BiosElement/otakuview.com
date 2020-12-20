@@ -77,8 +77,11 @@
     </div>
     {% endblock content %}
     
-    <footer class="container w-full md:max-w-6xl mx-auto pb-6 body-font text-center">
-        © 2020 William Chambers
+    <footer>
+        <div id="header-wrapper" class="container w-full md:max-w-6xl mx-auto bg-nibi rounded-t-lg p-4">
+            <a href="{{ config.base_url }}"><h1 class="font-ovLogo text-gofun text-6xl text-center pb-2"><span class="text-ninjin">O</span><span class="text-yanagi">V</span></h1></a>
+            <p class="text-center text-sm text-gofun">&copy; Copyright {{ now() | date(format="%Y") }}, William Chambers</p>
+        </div>
     </footer>
 </body>
 </html>
