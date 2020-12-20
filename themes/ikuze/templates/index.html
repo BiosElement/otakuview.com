@@ -32,7 +32,7 @@
     <div id="content-wrapper" class="container w-full md:max-w-6xl mx-auto pt-6">
         <div class="h-2 bg-nibi rounded-t-lg"></div>
         <div class="flex flex-wrap items-stretch bg-nibi">
-            {% for page in section.pages %}
+            {% for page in paginator.pages %}
             <div class="content-item w-full md:w-1/2 p-8" {% if page.extra.featured_image %}style = "background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url({{ config.base_url }}{{ page.extra.featured_image }}); background-size: cover;"{% endif %}>
                 <div class="max-w-xl mx-auto bg-haijiro overflow-hidden shadow-md rounded-lg">
                     <div class="p-6">
@@ -62,25 +62,17 @@
         <div class="h-2 bg-nibi rounded-b-lg"></div>
         
         <div class="flex pt-8 justify-center items-center">
-            <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-500 rounded-md cursor-not-allowed">
-                previous
+            {% if paginator.previous %}
+            <a href="{{ paginator.previous }}" class="mx-1 px-3 py-2 bg-white text-gray-700 hover:bg-indigo-600 hover:text-white rounded-md">
+                Newer
             </a>
+            {% endif %}
             
-            <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-700 hover:bg-indigo-600 hover:text-white rounded-md">
-                1
+            {% if paginator.next %}
+            <a href="{{ paginator.next }}" class="mx-1 px-3 py-2 bg-white text-gray-700 hover:bg-indigo-600 hover:text-white rounded-md">
+                Older
             </a>
-            
-            <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-700 hover:bg-indigo-600 hover:text-white rounded-md">
-                2
-            </a>
-            
-            <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-700 hover:bg-indigo-600 hover:text-white rounded-md">
-                3
-            </a>
-            
-            <a href="#" class="mx-1 px-3 py-2 bg-white text-gray-700 hover:bg-indigo-600 hover:text-white rounded-md">
-                Next
-            </a>
+            {% endif %}
         </div>
     </div>
     {% endblock content %}
