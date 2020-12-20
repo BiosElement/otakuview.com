@@ -1,8 +1,12 @@
 {% extends "index.html" %}
 
 {% block content %}
+<div id="content-header-rounder" class="container w-full md:max-w-6xl mx-auto mt-6 h-2 bg-nibi rounded-t-lg"></div>
+<div id="content-wrapper" class="container w-full md:max-w-6xl mx-auto bg-haijiro p-10 prose">
 <div class="post">
   <h1 class="post-title">404: Page not found</h1>
   Sorry, we've misplaced that URL or it's pointing to something that doesn't exist. <a href={{ config.base_url }}>Head back home</a> to try finding it again.</p>
 </div>
+</div>
+<div id="content-footer-rounder" class="container w-full md:max-w-6xl mx-auto mb-6 h-2 bg-nibi rounded-b-lg"></div>
 {% endblock content %}
