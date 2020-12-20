@@ -59,17 +59,17 @@
             </div>
             {% endfor %}
         </div>
-        <div class="h-2 bg-nibi rounded-b-lg"></div>
+        <div id="content-footer-rounder" class="h-2 bg-nibi rounded-b-lg"></div>
         
-        <div class="flex pt-8 justify-center items-center">
+        <div class="flex pt-6 pb-6 justify-center items-center">
             {% if paginator.previous %}
-            <a href="{{ paginator.previous }}" class="mx-1 px-3 py-2 bg-white text-gray-700 hover:bg-indigo-600 hover:text-white rounded-md">
+            <a href="{{ paginator.previous }}" class="mx-1 px-3 py-2 bg-haijiro text-nibi hover:bg-nibi hover:text-haijiro rounded-md">
                 Newer
             </a>
             {% endif %}
             
             {% if paginator.next %}
-            <a href="{{ paginator.next }}" class="mx-1 px-3 py-2 bg-white text-gray-700 hover:bg-indigo-600 hover:text-white rounded-md">
+            <a href="{{ paginator.next }}" class="mx-1 px-3 py-2 bg-haijiro text-nibi hover:bg-nibi hover:text-haijiro rounded-md">
                 Older
             </a>
             {% endif %}
@@ -77,7 +77,7 @@
     </div>
     {% endblock content %}
     
-    <footer class="container w-full md:max-w-6xl mx-auto pt-10 pb-10 body-font text-center">
+    <footer class="container w-full md:max-w-6xl mx-auto pb-6 body-font text-center">
         © 2020 William Chambers
     </footer>
 </body>
