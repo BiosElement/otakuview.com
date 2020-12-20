@@ -29,6 +29,13 @@ module.exports = {
       },
       fontFamily: {
         'ovLogo': ['Merienda'],
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#3B393C',
+          },
+        },
       }
     }
   },
