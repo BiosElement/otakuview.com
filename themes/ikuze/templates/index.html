@@ -56,7 +56,10 @@
                 <div class="max-w-xl mx-auto bg-haijiro overflow-hidden shadow-md rounded-lg">
                     <div class="p-6">
                         <div>
-                            <span class="text-blue-600 text-xs font-medium uppercase">Tag</span>
+                            {% if page.taxonomies.categories %}
+                                {% set category = page.taxonomies.categories | first %}
+                                <span class="text-nando text-xs font-medium uppercase">{{ category }}</span>
+                            {% endif %}
                             <a href="{{ page.permalink }}" class="block text-nibi font-bold text-2xl mt-2 hover:text-gray-600 hover:underline">{{ page.title }}</a>
                             {% if page.summary %}
                             <p class="text-sm font-semibold text-shadow text-justify text-nezumi mt-2">{{ page.summary | safe | striptags }}</p>
