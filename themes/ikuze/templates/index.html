@@ -15,8 +15,7 @@
     {% if config.generate_feed %}
     <link rel="alternate" type={% if config.feed_filename == "atom.xml" %}"application/atom+xml"{% else %}"application/rss+xml"{% endif %} title="RSS" href="{{ get_url(path=config.feed_filename) | safe }}">
     {% endif %}
-    
-    <script async defer data-domain="otakuview.com" src="https://plausible.otakuview.com/js/index.js"></script>
+
     <script type="text/javascript" src="https://api.pirsch.io/pirsch.js" id="pirschjs" data-code="VIbN52kxUfLoOqAJnw5w14vaegIKoBv1"></script>
     
     {% block extra_head %}
