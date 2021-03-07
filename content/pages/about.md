@@ -17,4 +17,4 @@ In the event of a Discord outage, we keep a Mumble server online to keep the com
 
 ## Privacy
 
-Our intent is to respect our users privacy and only collect minimal analytics to see what content is successful and where we should focus our efforts. To this end, we use [Pirsch Analytics](https://pirsch.io/) which set no cookies and does not collect personal information. In fact, you can see [our analytics](https://otakuview.pirsch.io/) yourself as there is nothing to hide.
+Our intent is to respect our users privacy and only collect minimal analytics to see what content is successful and where we should focus our efforts. To this end, we use [GoatCounter](https://www.goatcounter.com/) which set no cookies and does not collect personal information. In fact, you can see [our analytics](https://otakuview.goatcounter.com/) yourself as there is nothing to hide.
