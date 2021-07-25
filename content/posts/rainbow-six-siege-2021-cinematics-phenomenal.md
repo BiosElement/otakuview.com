@@ -2,6 +2,7 @@
 title = "Rainbow Six Siege 2021 Cinematics are Phenomenal"
 path = "rainbow-six-siege-2021-cinematics-phenomenal"
 date = 2021-07-25
+featured_image = "/rainbow-six-siege-cinematic-arena.jpg"
 [extra]
 comments = true
 +++
