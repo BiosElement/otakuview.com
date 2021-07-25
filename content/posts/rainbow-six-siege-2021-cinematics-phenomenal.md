@@ -6,6 +6,8 @@ date = 2021-07-25
 comments = true
 featured_image = "/rainbow-six-siege-cinematic-arena.jpg"
 +++
+![Rainbow Six Siege 2021 Cinematic Arena](/rainbow-six-siege-cinematic-arena.jpg "Rainbow Six Siege 2021 Cinematic Arena")
+
 While I've been away Tom Clancy's Rainbow Six Siege for over two years due to a combination of low interest and the growingly toxic community, the 2021 cinematics are legitimately amazing.
 <!-- more -->
 
