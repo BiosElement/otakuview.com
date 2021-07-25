@@ -2,9 +2,9 @@
 title = "Rainbow Six Siege 2021 Cinematics are Phenomenal"
 path = "rainbow-six-siege-2021-cinematics-phenomenal"
 date = 2021-07-25
-featured_image = "/rainbow-six-siege-cinematic-arena.jpg"
 [extra]
 comments = true
+featured_image = "/rainbow-six-siege-cinematic-arena.jpg"
 +++
 While I've been away Tom Clancy's Rainbow Six Siege for over two years due to a combination of low interest and the growingly toxic community, the 2021 cinematics are legitimately amazing.
 <!-- more -->
