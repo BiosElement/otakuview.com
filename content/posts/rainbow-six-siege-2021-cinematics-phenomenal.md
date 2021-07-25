@@ -17,4 +17,4 @@ Why on earth have these cinematics been so poorly advertised? Ubisoft has clearl
 
 While Rainbow Six Extraction has been delayed until January 2022, honestly the gameplay footage released hasn't really impressed. Hopefully these cinematics are their overall goal and if that were to occur, maybe Extraction will be better than it sounds.
 
-Additionally, I'd love to see a e-sports setting for Siege which, will a tad ridiculous, could be great for a more casual 'arcade' match format.
+Additionally, I'd love to see a e-sports setting for Siege which, while a tad ridiculous, could be great for a more casual 'arcade' match format.
